@@ -1,0 +1,234 @@
+//variáveis
+:root{
+    --vermelho:#F20505;
+    --azul_claro:#0511F2;
+    --azul_escuro:#060B73;
+    --cinza:#D9D9D9;
+}
+
+//Importar fontes
+@import url('https://fonts.googleapis.com/css2?family=Nokora:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+//reset
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--azul_escuro);
+    font-family: 'Nokora', sans-serif;
+    color: white;
+}
+
+//Container
+.container{
+    margin-left: 20px;
+}
+
+//Cabeçalho
+header {
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+
+        .logo{
+            color: var(--vermelho);
+            font-family: 'Monoton', cursive;
+            font-size: 40px;
+            margin-left: 5px;
+        }
+
+        nav{            
+            a{
+                text-decoration: none;
+                color: var(--cinza);
+                margin-right: 10px;
+
+                &:hover{
+                    color: white;
+                }
+            }            
+    }
+}
+
+
+
+//Menu Dropdown
+nav.nav-menu{
+
+    .nav-menu-lista-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;    
+    } 
+    a {
+        text-decoration: none;
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+      }
+      
+      li {
+        color: #fff;
+        display: block;
+        float: left;
+        padding: 15px;
+        position: relative;
+        text-decoration: none;
+        transition-duration: 0.5s;
+      }
+        
+      li a {
+        color: #fff;
+      }
+
+      li:hover {
+        background: var(--vermelho);
+        cursor: pointer;
+      }
+          
+      .dropdown {
+        visibility: hidden;
+        opacity: 0;
+        min-width: 5rem;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: none;
+      }
+      
+      .nav-menu-sbulista-principal:hover > .dropdown, .nav-menu-sbulista-principal .dropdown:hover{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+      }
+      
+      .feminino, .masculino {
+        clear: both;
+        width: 100%;
+      }
+}
+}
+
+//Banner - Jogo principal
+.jogoPrincipal{
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%) , url('../_img/capa/_capa-principal.png');
+    height: 550px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .container{
+        width: 100%;
+
+        .container-titulo{
+            text-transform: uppercase;
+            font-size: 50px;
+            margin-top: 15%;
+        }
+
+        .container-descricao{
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .container-botoes{
+
+            .atcb_initialized{
+                display: inline-block !important;
+            }
+
+            #atcb_button_0, .botoes-informacoes{
+                background-color: rgba(255, 0, 0, 0.5);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 15px 30px;
+                margin-right: 15px;
+                cursor: pointer;
+                transition: .3s ease all;
+                box-shadow: none !important;
+
+                &:hover{
+                    background-color: white;
+                    color: black;
+                }
+
+                i{
+                    margin-right: 8px;
+                    color: black;
+                }
+            }
+        }
+    }
+
+}
+
+.informacoes-adicionais{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    #informacoes{
+        background-color: rgba(255, 0, 0, 0.5);
+        line-height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        height: 80%;
+        width: 80%;
+        visibility: hidden;
+        border-radius: 20px;
+        padding: 15px;
+    }
+}
+
+//Carrosel de Jogos
+.carrosel-jogos{
+    margin-top: 10px;
+
+    .sub-proximosJogos{
+        font-family: 'Arial', sans-serif;
+        margin: 10px 20px;
+        font-size: 25px;
+    }
+
+    .owl-carousel{
+
+        .item{
+
+            .box-imagem{
+                height: 100%;
+                width: 100%;
+                display: block;
+                transition: transform .3s ease-in-out;
+                border-radius: 10px;
+
+                &:hover{
+                    transform: scale(.98);
+                }
+            }
+        }
+    }
+}
+

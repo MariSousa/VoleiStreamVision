@@ -1,0 +1,39 @@
+@media screen and (max-width: 900px) {
+  header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .botoes-lembrete, main .botoes-informacoes {
+    margin-top: 10px;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  body {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  header .container .logo {
+    font-size: 30px;
+  }
+  .nav-menu {
+    font-size: 12px;
+  }
+  #informacoes {
+    padding: 25px !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container-descricao {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
