@@ -230,7 +230,7 @@ header nav.nav-menu .feminino, header nav.nav-menu .masculino {
   margin-top: 10px;
 }
 
-.carrosel-jogos .sub-proximosJogos {
+.carrosel-jogos .sub-proximosJogos, .carrosel-jogos .sub-jogosMasculinos {
   font-family: 'Arial', sans-serif;
   margin: 10px 20px;
   font-size: 25px;
@@ -250,5 +250,26 @@ header nav.nav-menu .feminino, header nav.nav-menu .masculino {
 .carrosel-jogos .owl-carousel .item .box-imagem:hover {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.rodape {
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  background-color: var(--vermelho);
+  text-align: center;
+}
+
+.rodape a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  line-height: 60px;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.rodape a:hover {
+  border-bottom: 1px solid white;
 }
 /*# sourceMappingURL=main.css.map */
